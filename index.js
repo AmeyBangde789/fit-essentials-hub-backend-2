@@ -14,11 +14,10 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(cors({
-    origin:'http://localhost:4200',
+    origin:'https://mean-stack-project-frontend.onrender.com',
     credentials: true
 }))
 app.use("/api", addToCart);
-
 
 const connectToMongoDB=async()=>{
     try {
@@ -28,7 +27,6 @@ const connectToMongoDB=async()=>{
         throw error
     }
 }
-
 
 app.listen(port,()=>{
     connectToMongoDB()
