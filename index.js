@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(cors({
-    origin:'https://mean-stack-project-frontend.onrender.com',
+    origin:'https://fit-essentials-hub.onrender.com',
     credentials: true
 }))
 app.use("/api", addToCart);
